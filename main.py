@@ -4,14 +4,14 @@ def count(t):
     total_number_of_words = t.split()
     return len(total_number_of_words)
 
-#def sorted_list(dict):
-#    return dict["num"]
+def sorted_list(dict):
+    return dict[0]
 
 def print_letter_count(counting_letters):
     #convert dictionary to a list of tupels  
     new_sorted_list=list(counting_letters.items())
-    #sort that list of tupels based on the VALUE part of each tupel in DESCENDING ORDER
-    new_sorted_list.sort(reverse=True,key=lambda item: item[1])    
+    #sorted that list based on the key part of the list in an ascending order
+    new_sorted_list.sort(reverse=True,key=sorted_list)    
     #iterate through the list 
     for key, value in new_sorted_list:
         print(f"The {key} character was found {value} times.\n")
